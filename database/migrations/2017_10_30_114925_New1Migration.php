@@ -13,12 +13,9 @@ class New1Migration extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
-            $table->string('title');
-            $table->text('content');
-            $table->text('content2');
+        Schema::create('posts2', function (Blueprint $table) {
+
+            $table->text('content3');
         });
     }
 
@@ -29,6 +26,6 @@ class New1Migration extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('posts2');
     }
 }
